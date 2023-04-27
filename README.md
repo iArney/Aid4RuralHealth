@@ -72,4 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # Aid4RuralHealth
 A donation system for helping access to rural healthcare service 
->>>>>>> 6b3c521e9ed19e71b82a93817d62594ac259de54
+
