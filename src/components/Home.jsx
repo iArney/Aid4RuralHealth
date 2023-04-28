@@ -10,6 +10,7 @@ import donate from "../assets/donate.png"
 import Footer from "./ReUsable/Footer";
 import Volunteer from "./ReUsable/VolunteerCard";
 
+
 const Home = () => {
     return ( 
         <div>
@@ -165,6 +166,8 @@ const Home = () => {
 <div className=" bg-slate-500 h-16 w-full">
     <p className="text-center text-slate-50">Copyright: aid4ruralhealth 2023</p>
 </div>
+
+       
         </div>
      );
 }
