@@ -1,6 +1,15 @@
-// import {NavLink} from "react-router-dom"
+import {NavLink, useLocation} from "react-router-dom"
+import {useState, useEffect} from "react"
+import {useNavigate} from "react-router-dom"
 import logo from "../../assets/Aid4RH-Logo.png"
 const NavBar = () => {
+
+    const navigate = useNavigate()
+    const location = useLocation()
+    const [active, setActive] = useState(false)
+    useEffect(() => {
+       
+    }, []);
     return ( 
     <div className="w-full bg-white fixed top-0 z-50 h-16 shadow-md flex items-center justify-between">
         <div>
@@ -10,13 +19,24 @@ const NavBar = () => {
         <i className="fa-solid fa-bars text-2xl text-cyan-600"></i>
         </div>
 
-        <div className="hidden md:flex relative md:right-16 lg:right-96 h-full">
+        <div className="hidden md:flex relative md:right-16 lg:right-40 h-full justify-center items-center">
             <ul className="list-none flex items-center mx-24 h-full">
-                <li className="h-full flex items-center border-b-2 border-b-cyan-600"><a href="" className="px-6">Home</a></li>
-                <li className="h-full flex items-center"><a href="#" className="px-6">About Us</a></li>
-                <li className="h-full flex items-center"><a href="#" className="px-6">Contact</a></li>    
+                <li className={`${location.pathname === "/"? "border-b-2 border-b-cyan-600" : ""} hover:border-b-2 hover:border-b-cyan-100 cursor-pointer h-full flex items-center`} onClick={()=>navigate('/')}><NavLink to="/" className="px-6">Home</NavLink></li>
+                <li className={`${location.pathname === "/about"? "border-b-2 border-b-cyan-600" : ""} hover:border-b-2 hover:border-b-cyan-100 cursor-pointer h-full flex items-center`} onClick={()=>navigate('/about')}><NavLink to="/about" className="px-6">About Us</NavLink></li>
+                <li className={`${location.pathname === "/contact"? "border-b-2 border-b-cyan-600" : ""} hover:border-b-2 hover:border-b-cyan-100 cursor-pointer h-full flex items-center`} onClick={()=>navigate('/contact')}><NavLink to="/contact" className="px-6">Contact</NavLink></li>    
             </ul>
+
+            
+            <div className="w-24 cursor-pointer h-full flex justify-center items-center hover:border-b-2 border-b-cyan-600">
+                Login
+            </div>
+            <div className=" bg-sky-500 text-slate-50 h-10 w-32 flex items-center justify-center rounded-full cursor-pointer">
+                Donate
+            </div>
+     
         </div>
+
+        
     </div> 
     );
 }
