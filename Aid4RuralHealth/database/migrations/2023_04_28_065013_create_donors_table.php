@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('donors', function (Blueprint $table) {
             $table->id();
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('phonenumber');
+            $table->string('occupation');
+            $table->string('password');
             $table->timestamps();
         });
     }

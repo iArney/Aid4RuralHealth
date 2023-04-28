@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('volunteers', function (Blueprint $table) {
             $table->id();
+            $table->string('firstname');
+            $table->string('lastname');
+            $table->string('email');
+            $table->string('phonenumber');
+            $table->string('proffesional');
+            $table->string('password');
+            $table->string('certifates');
             $table->timestamps();
         });
     }
