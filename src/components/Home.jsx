@@ -146,7 +146,7 @@ const Home = () => {
 
 <div className="mt-8 p-10 md:p-20 md:mt-0">
         <h1 className=" font-bold text-3xl w-80">
-        Healthcare Services for Rural Areas
+        Volunteered Physicians
         </h1>
         <div className="grid grid-cols-1 mt-10 md:grid-cols-2 lg:grid-cols-3"> 
         <Volunteer docName="Dr. David Nguyen" />

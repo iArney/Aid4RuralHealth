@@ -6,10 +6,7 @@ const NavBar = () => {
 
     const navigate = useNavigate()
     const location = useLocation()
-    const [active, setActive] = useState(false)
-    useEffect(() => {
-       
-    }, []);
+    
     return ( 
     <div className="w-full bg-white fixed top-0 z-50 h-16 shadow-md flex items-center justify-between">
         <div>
@@ -30,7 +27,7 @@ const NavBar = () => {
             <div className="w-24 cursor-pointer h-full flex justify-center items-center hover:border-b-2 border-b-cyan-200">
                 Login
             </div>
-            <div className=" bg-sky-500 text-slate-50 h-10 w-32 flex items-center justify-center rounded-full cursor-pointer">
+            <div className={` ${location.pathname === "/donate" ? "bg-sky-900" : ""} bg-sky-500 hover:bg-sky-900 text-slate-50 h-10 w-32 flex items-center justify-center rounded-full cursor-pointer`} onClick={()=>navigate('/donate')} >
                 Donate
             </div>
      
